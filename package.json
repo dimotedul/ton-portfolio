@@ -1,0 +1,35 @@
+{
+  "name": "ton-portfolio-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot that shows TON wallet balances, Jettons, portfolio value in USD and recent transactions",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ton/core": "0.59.0",
+    "grammy": "1.30.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.14.0",
+    "@types/node": "22.9.0",
+    "eslint": "9.14.0",
+    "globals": "15.12.0",
+    "prettier": "3.3.3",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.13.0",
+    "vitest": "2.1.4"
+  }
+}
